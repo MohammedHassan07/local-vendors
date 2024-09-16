@@ -1,0 +1,1 @@
+1- Profile photo is not mandatory, profile photo will be static and same for all (like avatar)
