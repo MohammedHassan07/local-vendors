@@ -5,8 +5,8 @@ const checkUniqueEmail = require('../middlewares/checkUniqueEmail')
 
 const route = express.Router()
 
-route.post('/user/register', checkEmpty, checkUniqueEmail, registerUser)
+route.post('/register', checkEmpty, checkUniqueEmail, registerUser)
 
-route.post('/user/login', checkEmpty, loginUser)
+route.post('/login', checkEmpty, loginUser)
 
 module.exports = route

@@ -51,7 +51,7 @@ async function loginUser() {
 
         if (!token) return res.status(500).json({ flag: false, message: 'Somthing went wrong, Try after sometime ' })
 
-        res.status(200).json({ flag: true, message: 'Logging...', data: { token } })
+        res.status(200).json({ flag: true, message: 'Logging in...', data: { token } })
 
 
     } catch (error) {
