@@ -1,5 +1,4 @@
 {
-    "name": "potter",
-    "password": "12345",
-    "email": "potter@hogwardz.con"
-}
+    "flag": false,
+    "message": "User already present with provided email"
+  }

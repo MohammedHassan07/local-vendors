@@ -24,7 +24,7 @@ async function addProduct(req, res) {
     }
 }
 // get all prouct
-async function getAllProduct() {
+async function getAllProduct(req, res) {
 
     try {
 
@@ -40,13 +40,13 @@ async function getAllProduct() {
 }
 
 // add prouct
-async function getProductByName() {
+async function getProductByName(req, res) {
 
     try {
 
-        const { name } = req.body
+        const productName = req.params.productName
 
-        const products = productModel.find({ name })
+        const products = await productModel.find({ productName })
 
         if (!products) return res.status(404).json({ flag: false, message: 'No product found' })
 

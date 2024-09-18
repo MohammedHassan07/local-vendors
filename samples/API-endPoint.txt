@@ -1,0 +1,24 @@
+1- Register User: http://localhost:3000/user/register
+requestBody = {
+  "name": "potter",
+  "password": "12345",
+  "email": "potter@hogwardz.con"
+}
+
+2- login User: http://localhost:3000/user/login
+requestBody = {
+    
+  "password": "12345",
+  "email": "potter@hogwardz.con"
+}
+
+3- addProduct: http://localhost:3000/product/add
+requestBody = {
+
+  "flag": true,
+  "message": "Product uploaded successfully"
+}
+
+4- getAllProduct: http://localhost:3000/product/
+
+5- getProductByName: http://localhost:3000/product/get-product-by-name/productname

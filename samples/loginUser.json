@@ -1,4 +1,7 @@
 {
-    "password": "12345",
-    "email": "potter@hogwardz.con"
-}
+    "flag": true,
+    "message": "Logging in...",
+    "data": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZWE3Mzk0YThiMWVmZWI2NDFjZDMxMiIsImlhdCI6MTcyNjY0MzYyOX0.7iZ19odkoeVvCTfFKiAlQEpPQpREYaMlylWVTV07EOc"
+    }
+  }

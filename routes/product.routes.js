@@ -7,8 +7,8 @@ const route = express.Router()
 
 route.post('/add', verifyJWT, checkEmpty, addProduct)
 
-route.get('/get-all', getAllProduct)
+route.get('/get-all-product', getAllProduct)
 
-route.get('/get-by-name', getProductByName)
+route.get('/get-product-by-name/:productName', getProductByName)
 
 module.exports = route
