@@ -1,17 +1,17 @@
 const productModel = require("../models/product.model")
 
 // add prouct
-async function addProduct() {
+async function addProduct(req, res) {
 
     try {
 
         const user = req.user
 
-        const { name, location, imgURL } = req.body
+        const { productName, productImgURL, productLocation } = req.body
 
         // upload the image and get the imgURL
 
-        const product = new productModel({ name, imgURL, location })
+        const product = new productModel({ productName, productImgURL, productLocation })
 
         const savedProduct = await product.save()
 

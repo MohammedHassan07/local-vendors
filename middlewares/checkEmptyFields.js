@@ -6,14 +6,14 @@ function checkEmpty(req, res, next) {
 
         if (data.hasOwnProperty(key)) {
 
-            if (data[key] === null || data[key] === undefined) {
+            if (data[key] === null || data[key] === undefined || data[key] === '') {
 
-                res.status(400).json({
+                return res.status(400).json({
 
                     error: "Bad Request",
                     message: "Required values are empty."
                 })
-                return
+                
             }
         }
     }

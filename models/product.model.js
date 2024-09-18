@@ -1,12 +1,20 @@
 const { Schema, model } = require('mongoose')
 
+const locationSchema = new Schema({
+
+    lat: String,
+    long: String
+})
+
 const productSchema = new Schema({
 
-    name: String,
+    productName: String,
 
-    imgURL: String,
+    productCategory: String,
 
-    location: {}
+    productImgURL: String,
+
+    productLocation: locationSchema
 
 }, { timestamps: true })
 

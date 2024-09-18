@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken")
 
 async function verifyJWT(req, res, next) {
 
-    const token = req.body.token
+    const token = req.headers.token
 
     if (!token) return res.status().json({ flag: false, message: 'Something wnet wrong, You need to log in again' })
 

@@ -5,7 +5,7 @@ const checkEmpty = require('../middlewares/checkEmptyFields')
 
 const route = express.Router()
 
-route.get('/add', verifyJWT, checkEmpty, addProduct)
+route.post('/add', verifyJWT, checkEmpty, addProduct)
 
 route.get('/get-all', getAllProduct)
 

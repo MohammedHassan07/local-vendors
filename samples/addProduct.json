@@ -1,0 +1,9 @@
+{
+    "productName": "Nimbus2001",
+    "productCategory": "Aveation",
+    "productImgURL": "imageURL",
+    "productLocation": {
+        "lat": "1234",
+        "long": "4321"
+    }
+}
