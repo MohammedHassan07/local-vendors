@@ -10,7 +10,7 @@ const PORT = process.env.PORT
 app.listen(PORT, () => {
 
     console.log('Server is up at', PORT)
-    // connectDB()
+    connectDB()
 })
 
 const userRoutes = require('./routes/user.routes')

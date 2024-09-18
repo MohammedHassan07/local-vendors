@@ -3,18 +3,18 @@ const userModel = require('../models/user.model')
 const jwt = require('jsonwebtoken')
 
 // register user
-async function registerUser() {
+async function registerUser(req, res) {
 
     try {
 
 
-        const { name, email, passwrod } = req.body
+        const { name, email, password } = req.body
 
         // check email and send OTP after varification save the data 
 
 
-        const PASSWORD_SALT = process.env.PASSWORD_SALT
-        const hashsedPassword = await bcrypt.hash(passwrod, PASSWORD_SALT)
+        const PASSWORD_SALT = Number(process.env.PASSWORD_SALT)
+        const hashsedPassword = await bcrypt.hash(password, PASSWORD_SALT)
 
         if (!hashsedPassword) return res.status(500).json({ flag: false, message: 'Somthing went wrong, Try after sometime ' })
 
@@ -32,13 +32,13 @@ async function registerUser() {
 }
 
 // login user
-async function loginUser() {
+async function loginUser(req, res) {
 
     try {
 
         const { email, password } = req.body
 
-        const user = userModel.findOne({ email })
+        const user = await userModel.findOne({ email })
 
         if (!user) return res.status(500).json({ flag: false, message: 'Invalid Credentials, Check email or password' })
 
@@ -47,7 +47,7 @@ async function loginUser() {
         if (!valid) return res.status(500).json({ flag: false, message: 'Invalid Credentials, Check email or password' })
 
         const ACCESS_TOKEN = process.env.ACCESS_TOKEN
-        const token = jwt.sign(user, ACCESS_TOKEN)
+        const token = jwt.sign({ id: user._id }, ACCESS_TOKEN)
 
         if (!token) return res.status(500).json({ flag: false, message: 'Somthing went wrong, Try after sometime ' })
 
