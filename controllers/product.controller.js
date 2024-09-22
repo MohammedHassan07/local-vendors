@@ -10,10 +10,8 @@ async function addProduct(req, res) {
         const { productName, productLocation } = req.body
 
         const productImgURL = req.file.path
-      
-        const { lat, long } = productLocation
 
-        // upload the image and get the imgURL
+        const { lat, long } = productLocation
 
         const product = new productModel({ productName, productImgURL, productLocation: { lat, long } })
 
