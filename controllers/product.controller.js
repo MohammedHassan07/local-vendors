@@ -9,9 +9,11 @@ async function addProduct(req, res) {
 
         const { productName, productImgURL, productLocation } = req.body
 
+        const { lat, long } = productLocation
+
         // upload the image and get the imgURL
 
-        const product = new productModel({ productName, productImgURL, productLocation })
+        const product = new productModel({ productName, productImgURL, productLocation: { lat, long } })
 
         const savedProduct = await product.save()
 
