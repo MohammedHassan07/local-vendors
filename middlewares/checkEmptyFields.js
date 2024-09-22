@@ -2,15 +2,16 @@ function checkEmpty(req, res, next) {
 
     const data = req.body
 
-    if (Object.keys(data).length == 0) return res.status(400).json({
+    try {
 
-        error: "Bad Request",
-        message: "Required values are empty."
-    })
+        if (Object.keys(data).length == 0) return res.status(400).json({
 
-    for (let key in data) {
+            error: "Bad Request",
+            message: "Required values are empty."
+        })
 
-        if (data.hasOwnProperty(key)) {
+
+        for (const key of Object.keys(data)) {
 
             if (data[key] === null || data[key] === undefined || data[key] === '')
 
@@ -20,9 +21,17 @@ function checkEmpty(req, res, next) {
                     message: "Required values are empty."
                 })
         }
-    }
 
-    next()
+        next()
+    } catch (error) {
+
+        console.log(error)
+        return res.status(500).json({
+
+            error: "Bad Request",
+            message: error.message
+        })
+    }
 }
 
 module.exports = checkEmpty
