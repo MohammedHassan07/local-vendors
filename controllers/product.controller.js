@@ -17,7 +17,7 @@ async function addProduct(req, res) {
 
         const savedProduct = await product.save()
 
-        if (!savedProduct) return res.status().json({ flag: false, message: 'Something wnet wrong, Try after sometimes' })
+        if (!savedProduct) return res.status(500).json({ flag: false, message: 'Something wnet wrong, Try after sometimes' })
 
         res.status(200).json({ flag: true, message: 'Product uploaded successfully' })
 
