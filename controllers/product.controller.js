@@ -9,9 +9,14 @@ async function addProduct(req, res) {
 
         const userId = user._id
 
-        const { productName, productLocation, productCategory } = JSON.parse(req.body.json)
+        // const { productName, productLocation, productCategory } = JSON.parse(req.body.json)
+
+
+        const { productName, productLocation, productCategory } = req.body
 
         const productImgURL = req.file.path
+
+        console.log(req.file)
 
         const product = new productModel({ userId, productName, productImgURL, productLocation, productCategory })
 
