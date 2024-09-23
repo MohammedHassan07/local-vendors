@@ -9,11 +9,11 @@ async function addProduct(req, res) {
 
         const userId = user._id
 
-        const { productName, productLocation } = JSON.parse(req.body.json)
+        const { productName, productLocation, productCategory } = JSON.parse(req.body.json)
 
         const productImgURL = req.file.path
 
-        const product = new productModel({ userId, productName, productImgURL, productLocation })
+        const product = new productModel({ userId, productName, productImgURL, productLocation, productCategory })
 
         const savedProduct = await product.save()
 
@@ -42,13 +42,13 @@ async function getAllProduct(req, res) {
 }
 
 // add prouct
-async function getProductByName(req, res) {
+async function getProductByCategory(req, res) {
 
     try {
 
-        const productName = req.params.productName
+        const productCategory = req.params.productCategory
 
-        const products = await productModel.find({ productName })
+        const products = await productModel.find({ productCategory })
 
         if (!products) return res.status(404).json({ flag: false, message: 'No product found' })
 
@@ -64,5 +64,5 @@ module.exports = {
 
     addProduct,
     getAllProduct,
-    getProductByName
+    getProductByCategory
 }
