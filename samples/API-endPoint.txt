@@ -21,4 +21,6 @@ requestBody = {
 
 4- getAllProduct: http://localhost:3000/product/
 
-5- getProductByName: http://localhost:3000/product/get-product-by-name/productname
+5- getProductByCategory: http://localhost:3000/product/get-product-by-name/getProductByCategory
+
+6- getUserProfile: http://localhost:3000/user/getProfile

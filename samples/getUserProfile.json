@@ -1,0 +1,46 @@
+{
+    "flag": true,
+    "user": {
+        "_id": "66f13d4ec8cabd2030cce540",
+        "name": "potter",
+        "email": "potter@hogwardz.con",
+        "createdAt": "2024-09-23T10:05:02.610Z",
+        "updatedAt": "2024-09-23T10:05:02.610Z",
+        "__v": 0
+    },
+    "userProducts": [
+        {
+            "_id": "66f13de96ac071806bfaa180",
+            "userId": "66f13d4ec8cabd2030cce540",
+            "productName": "Nimbus2000",
+            "productCategory": "Aveation",
+            "productImgURL": "283943366440903.jpg",
+            "productLocation": "Hogwardz",
+            "createdAt": "2024-09-23T10:07:37.465Z",
+            "updatedAt": "2024-09-23T10:07:37.465Z",
+            "__v": 0
+        },
+        {
+            "_id": "66f13dea6ac071806bfaa182",
+            "userId": "66f13d4ec8cabd2030cce540",
+            "productName": "Nimbus2000",
+            "productCategory": "Aveation",
+            "productImgURL": "35494878521258033.jpg",
+            "productLocation": "Hogwardz",
+            "createdAt": "2024-09-23T10:07:38.587Z",
+            "updatedAt": "2024-09-23T10:07:38.587Z",
+            "__v": 0
+        },
+        {
+            "_id": "66f13e1a6ac071806bfaa184",
+            "userId": "66f13d4ec8cabd2030cce540",
+            "productName": "Nimbus2000",
+            "productCategory": "Aveation",
+            "productImgURL": "7928435619008796.jpg",
+            "productLocation": "Hogwardz",
+            "createdAt": "2024-09-23T10:08:26.873Z",
+            "updatedAt": "2024-09-23T10:08:26.873Z",
+            "__v": 0
+        }
+    ]
+}

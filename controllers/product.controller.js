@@ -7,7 +7,8 @@ async function addProduct(req, res) {
 
         const user = req.user
 
-        const userId = user._id
+        const userId = user.id
+        console.log(userId)
 
         // const { productName, productLocation, productCategory } = JSON.parse(req.body.json)
 
@@ -16,7 +17,7 @@ async function addProduct(req, res) {
 
         const productImgURL = req.file.path
 
-        console.log(req.file)
+        // console.log(req.file)
 
         const product = new productModel({ userId, productName, productImgURL, productLocation, productCategory })
 

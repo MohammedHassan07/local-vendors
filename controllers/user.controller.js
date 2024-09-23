@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs')
 const userModel = require('../models/user.model')
 const jwt = require('jsonwebtoken')
+const productModel = require('../models/product.model')
 
 // register user
 async function registerUser(req, res) {
@@ -59,8 +60,29 @@ async function loginUser(req, res) {
     }
 }
 
+
+async function getUserProfile(req, res) {
+
+
+    try {
+
+        const userId = req.user.id.
+
+        const user = await userModel.findOne({ _id: userId }).select('-password')
+
+        const userProducts = await productModel.find({ userId })
+
+        if (!userProducts) return res.status(404).json({ flag: false, message: 'No products found' })
+
+        res.status(200).json({ flag: true, user, userProducts })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 module.exports = {
 
     registerUser,
-    loginUser
+    loginUser,
+    getUserProfile
 }
