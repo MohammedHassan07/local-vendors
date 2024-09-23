@@ -7,13 +7,13 @@ async function addProduct(req, res) {
 
         const user = req.user
 
-        const { productName, productLocation } = req.body
+        const userId = user._id
+
+        const { productName, productLocation } = JSON.parse(req.body.json)
 
         const productImgURL = req.file.path
 
-        const { lat, long } = productLocation
-
-        const product = new productModel({ productName, productImgURL, productLocation: { lat, long } })
+        const product = new productModel({ userId, productName, productImgURL, productLocation })
 
         const savedProduct = await product.save()
 

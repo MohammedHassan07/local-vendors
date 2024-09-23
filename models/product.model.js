@@ -1,12 +1,12 @@
 const { Schema, model } = require('mongoose')
 
-const locationSchema = new Schema({
-
-    lat: String,
-    long: String
-})
-
 const productSchema = new Schema({
+
+    userId: {
+
+        type: Schema.Types.ObjectId,
+        ref: 'user'
+    },
 
     productName: String,
 
@@ -14,7 +14,7 @@ const productSchema = new Schema({
 
     productImgURL: String,
 
-    productLocation: locationSchema
+    productLocation: String
 
 }, { timestamps: true })
 
