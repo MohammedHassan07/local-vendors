@@ -33,7 +33,10 @@ async function generateOTP(req, res) {
             from: process.env.USER_EMAIL,
             to: email,
             subject: 'Street Bazaar OTP',
-            text: `Your OTP for Street Bazaar is <b>${OTP}<\b>, expires in 10 minutes`
+            html: ` <div style="font-family: Arial, sans-serif; line-height: 1.5;">
+            <p style="font-size: 16px;">Your OTP for Street bazaar is <strong style="color: #4CAF50;">${OTP}</strong>.</p>
+            <p style="font-size: 14px;">It expires in <strong>10 minutes</strong>.</p>
+        </div>`
         }
 
         await transporter.sendMail(mailOption)

@@ -24,3 +24,15 @@ requestBody = {
 5- getProductByCategory: http://localhost:3000/product/get-product-by-name/getProductByCategory
 
 6- getUserProfile: http://localhost:3000/user/getProfile
+
+7- otp generation: http://localhost:3000/otp/generate-otp
+requestBody = {
+   "email": "college.id.fr@gmail.com"
+}
+
+8- otp verification: http://localhost:3000/otp/verify-otp
+requestBody = {
+  
+    "email": "college.id.fr@gmail.com",
+    "otp": "9740" 
+}
