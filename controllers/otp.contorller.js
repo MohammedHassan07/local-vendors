@@ -1,5 +1,5 @@
 const otpModel = require("../models/otp.model")
-const bcrypt = requrie('bcryptjs')
+const bcrypt = require('bcryptjs')
 const nodemailer = require('nodemailer')
 
 // generate OTP
@@ -12,7 +12,7 @@ async function generateOTP(req, res) {
         // generate OTP
         const OTP = Math.floor(Math.random() * 9000) + 1000
 
-        const hashOTP = await bcrypt.hash(OTP, 10)
+        const hashOTP = await bcrypt.hash(OTP.toString(), 10)
         const otp = new otpModel({ email, otp: hashOTP })
 
         await otp.save()
@@ -24,7 +24,7 @@ async function generateOTP(req, res) {
             auth: {
 
                 user: process.env.USER_EMAIL,
-                pass: USER_PASS
+                pass: process.env.USER_PASS
             }
         })
 
@@ -53,13 +53,15 @@ async function verifyOTP(req, res) {
 
         const { email, otp } = req.body
 
-        const OTP = otpModel.find({ email })
+        const OTP =  await otpModel.findOne({ email })
 
         const verified = await bcrypt.compare(otp, OTP.otp)
 
         if (!verified) return res.status(400).json({flag: false, message: 'OTP not matched'})
 
-        return res.status(200).json({flag: true, message: 'Email verified'})
+        res.status(200).json({flag: true, message: 'Email verified'})
+
+        await otpModel.deleteOne({email})
         
     } catch (error) {
         console.log(error)

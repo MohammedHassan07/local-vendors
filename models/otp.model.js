@@ -3,7 +3,7 @@ const { Schema, model } = require('mongoose')
 const otpSchema = new Schema({
 
     email: String,
-    otp: Number
+    otp: String
 })
 
 const otpModel = model('otp', otpSchema)
