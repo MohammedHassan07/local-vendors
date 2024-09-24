@@ -16,6 +16,8 @@ app.listen(PORT, () => {
 
 const userRoutes = require('./routes/user.routes')
 const productRoutes = require('./routes/product.routes')
+const otpRoutes = require('./routes/otp.routes')
 
 app.use('/user', userRoutes)
 app.use('/product', productRoutes)
+app.use('/otp', otpRoutes)

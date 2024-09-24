@@ -66,7 +66,7 @@ async function getUserProfile(req, res) {
 
     try {
 
-        const userId = req.user.id.
+        const userId = req.user.id
 
         const user = await userModel.findOne({ _id: userId }).select('-password')
 
