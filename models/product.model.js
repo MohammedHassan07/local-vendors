@@ -16,7 +16,7 @@ const productSchema = new Schema({
 
     productLocation: String
 
-}, { timestamps: true })
+})
 
 const productModel = model('product', productSchema)
 

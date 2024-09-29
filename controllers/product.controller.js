@@ -36,7 +36,10 @@ async function getAllProduct(req, res) {
 
     try {
 
-        const products = await productModel.find()
+        const products = await productModel.find().populate({
+            path: 'userId',
+            select: '-password'
+        })
 
         if (!products) return res.status(404).json({ flag: false, message: 'No product found' })
 
