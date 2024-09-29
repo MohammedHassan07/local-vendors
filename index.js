@@ -2,10 +2,13 @@ const express = require('express')
 const dotenv = require('dotenv')
 const connectDB = require('./config/connectDB')
 dotenv.config()
+const path = require('path')
+
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, 'images')))
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {

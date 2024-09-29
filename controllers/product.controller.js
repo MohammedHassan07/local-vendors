@@ -41,7 +41,7 @@ async function getAllProduct(req, res) {
             select: '-password'
         })
 
-        if (!products) return res.status(404).json({ flag: false, message: 'No product found' })
+        if (products.length == 0) return res.status(404).json({ flag: false, message: 'No product found' })
 
         res.status(200).json({ flag: true, products })
 
@@ -59,7 +59,7 @@ async function getProductByCategory(req, res) {
 
         const products = await productModel.find({ productCategory })
 
-        if (!products) return res.status(404).json({ flag: false, message: 'No product found' })
+        if (products.length == 0) return res.status(404).json({ flag: false, message: 'No product found' })
 
         res.status(200).json({ flag: true, products })
 
