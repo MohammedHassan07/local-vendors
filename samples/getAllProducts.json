@@ -1,65 +1,68 @@
 {
     "flag": true,
     "products": [
-        {
-            "_id": "66f1387ed8476c41bb3fc029",
-            "productName": "Nimbus2000",
-            "productCategory": "Aveation",
-            "productImgURL": "6396828444564349.jpg",
-            "productLocation": "Hogwardz",
-            "createdAt": "2024-09-23T09:44:30.420Z",
-            "updatedAt": "2024-09-23T09:44:30.420Z",
-            "__v": 0
+      {
+        "_id": "66f13de96ac071806bfaa180",
+        "userId": {
+          "_id": "66f13d4ec8cabd2030cce540",
+          "name": "potter",
+          "email": "potter@hogwardz.con",
+          "createdAt": "2024-09-23T10:05:02.610Z",
+          "updatedAt": "2024-09-23T10:05:02.610Z",
+          "__v": 0
         },
-        {
-            "_id": "66f1387fd8476c41bb3fc02b",
-            "productName": "Nimbus2000",
-            "productCategory": "Aveation",
-            "productImgURL": "25795028994839386.jpg",
-            "productLocation": "Hogwardz",
-            "createdAt": "2024-09-23T09:44:31.685Z",
-            "updatedAt": "2024-09-23T09:44:31.685Z",
-            "__v": 0
+        "productName": "Nimbus2000",
+        "productCategory": "Aveation",
+        "productImgURL": "/home/ashar/Desktop/local-vendors/images/nodejs.png-0.283943366440903.jpg",
+        "productLocation": "Hogwardz",
+        "createdAt": "2024-09-23T10:07:37.465Z",
+        "updatedAt": "2024-09-23T10:07:37.465Z",
+        "__v": 0
+      },
+      {
+        "_id": "66f13dea6ac071806bfaa182",
+        "userId": {
+          "_id": "66f13d4ec8cabd2030cce540",
+          "name": "potter",
+          "email": "potter@hogwardz.con",
+          "createdAt": "2024-09-23T10:05:02.610Z",
+          "updatedAt": "2024-09-23T10:05:02.610Z",
+          "__v": 0
         },
-        {
-            "_id": "66f13880d8476c41bb3fc02d",
-            "productName": "Nimbus2000",
-            "productCategory": "Aveation",
-            "productImgURL": "7904278242827754.jpg",
-            "productLocation": "Hogwardz",
-            "createdAt": "2024-09-23T09:44:32.959Z",
-            "updatedAt": "2024-09-23T09:44:32.959Z",
-            "__v": 0
+        "productName": "Nimbus2000",
+        "productCategory": "Aveation",
+        "productImgURL": "/home/ashar/Desktop/local-vendors/images/nodejs.png-0.35494878521258033.jpg",
+        "productLocation": "Hogwardz",
+        "createdAt": "2024-09-23T10:07:38.587Z",
+        "updatedAt": "2024-09-23T10:07:38.587Z",
+        "__v": 0
+      },
+      {
+        "_id": "66f13e1a6ac071806bfaa184",
+        "userId": {
+          "_id": "66f13d4ec8cabd2030cce540",
+          "name": "potter",
+          "email": "potter@hogwardz.con",
+          "createdAt": "2024-09-23T10:05:02.610Z",
+          "updatedAt": "2024-09-23T10:05:02.610Z",
+          "__v": 0
         },
-        {
-            "_id": "66f13882d8476c41bb3fc02f",
-            "productName": "Nimbus2000",
-            "productCategory": "Aveation",
-            "productImgURL": "9261111492626755.jpg",
-            "productLocation": "Hogwardz",
-            "createdAt": "2024-09-23T09:44:34.353Z",
-            "updatedAt": "2024-09-23T09:44:34.353Z",
-            "__v": 0
-        },
-        {
-            "_id": "66f13883d8476c41bb3fc031",
-            "productName": "Nimbus2000",
-            "productCategory": "Aveation",
-            "productImgURL": "9195394274613065.jpg",
-            "productLocation": "Hogwardz",
-            "createdAt": "2024-09-23T09:44:35.537Z",
-            "updatedAt": "2024-09-23T09:44:35.537Z",
-            "__v": 0
-        },
-        {
-            "_id": "66f138c8a0857d535f5b2b1a",
-            "productName": "Nimbus2000",
-            "productCategory": "Aveation",
-            "productImgURL": "08925683226377945.jpg",
-            "productLocation": "Hogwardz",
-            "createdAt": "2024-09-23T09:45:44.479Z",
-            "updatedAt": "2024-09-23T09:45:44.479Z",
-            "__v": 0
-        }
+        "productName": "Nimbus2000",
+        "productCategory": "Aveation",
+        "productImgURL": "/home/ashar/Desktop/local-vendors/images/nodejs.png-0.7928435619008796.jpg",
+        "productLocation": "Hogwardz",
+        "createdAt": "2024-09-23T10:08:26.873Z",
+        "updatedAt": "2024-09-23T10:08:26.873Z",
+        "__v": 0
+      },
+      {
+        "_id": "66f8f7e13dd6636048761434",
+        "userId": null,
+        "productName": "temp",
+        "productCategory": "temp",
+        "productImgURL": "/home/ashar/Desktop/local-vendors/images/nodejs.png-0.06689241893464426.jpg",
+        "productLocation": "temp",
+        "__v": 0
+      }
     ]
-}
+  }
