@@ -27,7 +27,7 @@ LocalVendors is a product listing app designed to help street vendors showcase t
 Frontend URL: [LocalVendors App](https://local.vendor.com)
 
 ## 👨‍💻 Contributors
-- **Backend Developer:** [Mohammed Hassan]
+- **Backend Developer:** [Mohammed Hassan](https://www.linkedin.com/in/mohammed-hassan-343b00215)
 - **Frontend Developer:** [Abdul Rahman](https://www.linkedin.com/in/abd-234)
 
 ## 📜 License
