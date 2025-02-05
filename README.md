@@ -24,11 +24,11 @@ LocalVendors is a product listing app designed to help street vendors showcase t
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 
 ## 🌍 Live Demo
-Frontend URL: [LocalVendors App](https://local.vendor.com)
+Frontend URL: [LocalVendors App]([https://local.vendor.com](https://github.com/abdulrahman0842/street-mart))
 
 ## 👨‍💻 Contributors
 - **Backend Developer:** [Mohammed Hassan](https://www.linkedin.com/in/mohammed-hassan-343b00215)
-- **Frontend Developer:** [Abdul Rahman](https://www.linkedin.com/in/abd-234)
+- **Frontend Developer:** [Abdul Rahman](https://www.linkedin.com/in/abdulrahman0842)
 
 ## 📜 License
 This project is licensed under the MIT License.
